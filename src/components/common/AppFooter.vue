@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-center main-margin">
+  <footer class="text__center main__margin">
     {{ new Date().getFullYear() }}
     created by
     <a

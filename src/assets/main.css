@@ -43,16 +43,21 @@ a:active {
   color: var(--details-dark)
 }
 
-.text-center {
+.text__center {
   text-align: center;
 }
 
-.main-margin {
+.main__margin {
   margin: 2% auto;
 }
 
-.main-padding {
+.main__padding {
   padding: 2%
+}
+
+.main__title {
+  font-size: 5vw;
+  text-shadow: -5px -2px var(--details-light);
 }
 
 h1 {

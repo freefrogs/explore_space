@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;800&display=swap');
 
 :root {
---main-font: 'Ruda', Arial, sans-serif;
+  --main-font: 'Ruda', Arial, sans-serif;
+  --dark: rgb(24, 24, 24);
+  --light: #fff;
+  --details-dark: #4c014c;
+  --details-light: rgb(250, 225, 1);
+  --shadow: 5px 5px 10px rgb(56, 55, 55);
 }
 
 *,
@@ -22,4 +27,36 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 800;
+  transition: .3s ease-in-out;
+  opacity: 0.8;
+}
+a:hover {
+  opacity: 1;
+}
+a:active {
+  color: var(--details-dark)
+}
+
+.text-center {
+  text-align: center;
+}
+
+.main-margin {
+  margin: 2% auto;
+}
+
+.main-padding {
+  padding: 2%
+}
+
+h1 {
+  color: #fff;
+  text-shadow: -2px -2px #ccc;
+  font-size: 40px;
 }

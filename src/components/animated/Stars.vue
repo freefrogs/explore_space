@@ -1,19 +1,22 @@
 <template>
-  <div class="stars-box">
-     <div
+  <div class="stars-box main__absolute">
+    <div
       v-for="(star, index) in stars"
       :key="index"
       class="star"
       :style="{ top: star.top, left: star.left, animationDelay: star.delay }"
     ></div>
   </div>
+  <morphing-bg />
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue'
 import type Star from '@/types/Star'
+import MorphingBg from '@/components/animated/MorphingBg.vue'
 
 export default defineComponent({
+  components: { MorphingBg },
   setup () {
     const stars = ref<Star[]>([])
 
@@ -27,7 +30,7 @@ export default defineComponent({
       return `${randomNumber}s`
     }
 
-    const generateStars = (amount = 15) => {
+    const generateStars = (amount = 30) => {
       for (let i = 0; i <= amount; i++) {
         const star = {
           top: generatePosition(),
@@ -48,11 +51,6 @@ export default defineComponent({
 
 <style lang="scss">
 .stars-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: radial-gradient(ellipse at bottom, #290029 0%, #090a0f 100%);
 }
 

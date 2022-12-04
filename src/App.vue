@@ -15,7 +15,7 @@
     <header>
       <navigation />
     </header>
-    <main>
+    <main class="main__absolute">
       <router-view v-slot="{ Component }">
         <transition
           name="route"

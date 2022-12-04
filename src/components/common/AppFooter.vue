@@ -6,7 +6,6 @@
       href="https://freefrogs.github.io/Portfolio/#/"
       target="_blank"
       rel="noopener noreferrer"
-      class="white--text"
     > freefrogs</a>
   </footer>
 </template>

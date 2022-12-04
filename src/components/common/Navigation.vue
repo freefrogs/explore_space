@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navigation">
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
   </nav>
@@ -10,15 +10,12 @@ import { defineComponent } from 'vue'
 import { RouterLink } from 'vue-router'
 
 export default defineComponent({
-  components: { RouterLink },
-  setup () {
-    
-
-    return {}
-  }
+  components: { RouterLink }
 })
 </script>
 
 <style lang="scss">
-
+.navigation {
+  z-index: 10;
+}
 </style>

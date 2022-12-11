@@ -30,7 +30,7 @@ export default defineComponent({
       return `${randomNumber}s`
     }
 
-    const generateStars = (amount = 30) => {
+    const generateStars = (amount = 45) => {
       for (let i = 0; i <= amount; i++) {
         const star = {
           top: generatePosition(),

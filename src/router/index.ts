@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Stars from '@/components/animated/Stars.vue'
-import HomeView from '@/views/HomeView.vue'
-import AboutView from '@/views/AboutView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +18,78 @@ const router = createRouter({
       name: 'about',
       components: {
         default: () => import('../views/AboutView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/history',
+      name: 'history',
+      components: {
+        default: () => import('../views/HistoryView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/starlink',
+      name: 'starlink',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/capsules',
+      name: 'capsules',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/crew',
+      name: 'crew',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/dragons',
+      name: 'dragons',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/launches',
+      name: 'launches',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/rockets',
+      name: 'rockets',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars
+      },
+      props: { default: true, stars: true }
+    },
+    {
+      path: '/ships',
+      name: 'ships',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
         stars: Stars
       },
       props: { default: true, stars: true }

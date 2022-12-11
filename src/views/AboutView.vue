@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h2 class="main__title">About SpaceX</h2>
   </div>
 </template>

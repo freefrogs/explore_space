@@ -94,7 +94,7 @@ export default defineComponent({
     min-width: 320px;
     height: calc(1.5vw + 20px);
     &:hover .navigation-explore__links {
-      opacity: 0.8;
+      opacity: 0.98;
       transform: translateY(0);
     }
   }

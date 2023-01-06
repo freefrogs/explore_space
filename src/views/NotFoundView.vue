@@ -1,5 +1,5 @@
 <template>
-  <div class="text__center">
+  <div class="text__center not-found-view">
     <h2 class="main__title">404 Page not found</h2>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,14 +16,17 @@
 </template>
 
 <style lang="scss">
-.svg__astronaut {
-  width: 50%;
-  @media screen and (orientation: portrait) {
-    width: 100%;
-  }
-  path {
-    fill: #000;
-    stroke-width: 0.33;
+.not-found-view {
+  padding-top: 5%;
+  .svg__astronaut {
+    width: 50%;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+    }
+    path {
+      fill: #000;
+      stroke-width: 0.33;
+    }
   }
 }
 </style>

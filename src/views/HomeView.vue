@@ -1,7 +1,6 @@
 <template>
-  <div class="main__absolute home">
-    <div class="home__texts text__center main__centered">
-      <h2 class="main__title">Explore the Space</h2>
+  <introduction-box title="Explore the Space">
+    <div class="home">
       <p>
         This application is based on
         <br>
@@ -14,19 +13,27 @@
       </p>
       <p>I wish you a pleasant exploration</p>
     </div>
-  </div>
+  </introduction-box>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import IntroductionBox from '@/components/common/IntroductionBox.vue'
+
+export default defineComponent({
+  components: { IntroductionBox },
+  setup () {
+    
+
+    return {}
+  }
+})
+</script>
 
 <style lang="scss">
 .home {
-  .home__texts {
-    font-size: 2vw;
-    width: 50%;
-    margin: 1% auto;
-    text-shadow: 0 0 5px var(--light);
-    @media screen and (orientation: portrait) {
-      width: 80%;
-    }
-  }
+  font-size: 2vw;
+  margin: 1% auto;
+  text-shadow: 0 0 5px var(--light);
 }
 </style>

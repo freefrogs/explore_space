@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <h2 class="main__title">SpaceX historical events</h2>
-  </div>
+  <introduction-box title="SpaceX historical events">
+
+  </introduction-box>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import IntroductionBox from '@/components/common/IntroductionBox.vue'
 
 export default defineComponent({
+  components: { IntroductionBox },
   setup () {
     
 
@@ -15,7 +17,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-
-</style>

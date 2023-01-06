@@ -1,13 +1,15 @@
 <template>
-  <div>
-    EXPLORE
-  </div>
+  <introduction-box title="Explore">
+
+  </introduction-box>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import IntroductionBox from '@/components/common/IntroductionBox.vue'
 
 export default defineComponent({
+  components: { IntroductionBox },
   setup () {
     
 
@@ -15,7 +17,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-
-</style>

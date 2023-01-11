@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="basic basic--height">
     <router-view
       name="stars"
       v-slot="{ Component }"
@@ -27,6 +27,19 @@
       </router-view>
     </main>
   </div>
+  <router-view
+    name="info"
+    class="basic"
+    v-slot="{ Component }"
+  >
+    <transition
+      name="animated"
+      mode="out-in"
+      appear
+    >
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
   <app-footer />
 </template>
 
@@ -37,14 +50,17 @@ import AppFooter from '@/components/common/AppFooter.vue';
 </script>
 
 <style lang="scss">
-.app {
-  min-height: 80vh;
+.basic {
+  padding: 1%;
   width: 80%;
   margin: 2% auto;
   border: 6px solid var(--dark);
   box-shadow: var(--shadow);
   border-radius: 30px;
   overflow: hidden;
+  &--height {
+    min-height: 80vh;
+  }
 }
 .route-enter-from, .route-leave-to {
   opacity: 0;

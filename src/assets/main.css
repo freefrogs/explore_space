@@ -75,3 +75,16 @@ a:active {
   top: 0;
   left: 0;
 }
+
+.introduction__text {
+  text-shadow: 0 0 2px var(--light);
+  line-height: 1.5;
+  font-size: 1.2vw;
+}
+
+.info__header {
+  text-align: center;
+  font-size: 1.4vw;
+  font-weight: 800;
+  margin: 1% auto;
+}

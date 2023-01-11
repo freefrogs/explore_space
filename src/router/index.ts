@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Stars from '@/components/animated/Stars.vue'
+import About from '@/components/About/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +19,8 @@ const router = createRouter({
       name: 'about',
       components: {
         default: () => import('../views/AboutView.vue'),
-        stars: Stars
+        stars: Stars,
+        info: About
       },
       props: { default: true, stars: true }
     },

@@ -39,11 +39,10 @@ export default defineComponent({
       'history'
     ]
     const exploreLinks: RouteRecordName[] = [
-      'starlink',
-      'capsules',
-      'crew',
-      'dragons',
       'launches',
+      'crew',
+      'capsules',
+      'dragons',
       'rockets',
       'ships',
     ]

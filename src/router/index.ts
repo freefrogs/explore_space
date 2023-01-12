@@ -41,8 +41,17 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/starlink',
-      name: 'starlink',
+      path: '/launches',
+      name: 'launches',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars,
+        info: () => import('../components/Launches/index.vue'),
+      }
+    },
+    {
+      path: '/crew',
+      name: 'crew',
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
@@ -57,24 +66,8 @@ const router = createRouter({
       }
     },
     {
-      path: '/crew',
-      name: 'crew',
-      components: {
-        default: () => import('../views/ExploreView.vue'),
-        stars: Stars
-      }
-    },
-    {
       path: '/dragons',
       name: 'dragons',
-      components: {
-        default: () => import('../views/ExploreView.vue'),
-        stars: Stars
-      }
-    },
-    {
-      path: '/launches',
-      name: 'launches',
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars

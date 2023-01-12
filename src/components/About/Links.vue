@@ -58,13 +58,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
-import type { Links } from '@/types/about'
+import type { HistoryLinks } from '@/types/about'
 
 export default defineComponent({
   props: {
     links: {
       required: true,
-      type: Object as PropType<Links>
+      type: Object as PropType<HistoryLinks>
     }
   }
 })

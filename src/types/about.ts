@@ -4,7 +4,7 @@ interface Headquarters {
   state: string
 }
 
-export interface Links {
+export interface HistoryLinks {
   website: string,
   flickr: string,
   twitter: string,
@@ -13,7 +13,7 @@ export interface Links {
 
 export interface CompanyInfo {
   headquarters: Headquarters,
-  links: Links,
+  links: HistoryLinks,
   name: string,
   founder: string,
   founded: number,

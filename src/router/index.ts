@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Stars from '@/components/animated/Stars.vue'
-import About from '@/components/About/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,8 +10,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/HomeView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/about',
@@ -20,18 +18,17 @@ const router = createRouter({
       components: {
         default: () => import('../views/AboutView.vue'),
         stars: Stars,
-        info: About
-      },
-      props: { default: true, stars: true }
+        info: () => import('../components/About/index.vue'),
+      }
     },
     {
       path: '/history',
       name: 'history',
       components: {
         default: () => import('../views/HistoryView.vue'),
-        stars: Stars
-      },
-      props: { default: true, stars: true }
+        stars: Stars,
+        info: () => import('../components/History/index.vue'),
+      }
     },
     {
       path: '/starlink',
@@ -39,8 +36,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/capsules',
@@ -48,8 +44,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/crew',
@@ -57,8 +52,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/dragons',
@@ -66,8 +60,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/launches',
@@ -75,8 +68,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/rockets',
@@ -84,8 +76,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/ships',
@@ -93,8 +84,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars
-      },
-      props: { default: true, stars: true }
+      }
     },
     {
       path: '/:pathMatch(.*)*',

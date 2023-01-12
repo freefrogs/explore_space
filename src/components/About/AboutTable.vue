@@ -45,6 +45,7 @@ export default defineComponent({
     }
   }
   &__paragraph {
+    font-size: 1vw;
     background: var(--light);
     padding: 10px;
     &--headquarters {

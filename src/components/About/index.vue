@@ -19,7 +19,6 @@ export default defineComponent({
   setup () {
     const aboutStore = useAboutStore()
     const { aboutData } = storeToRefs(aboutStore)
-    console.log(aboutData)
     return { aboutData }
   }
 })

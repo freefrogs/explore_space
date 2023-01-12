@@ -84,7 +84,27 @@ a:active {
 
 .info__header {
   text-align: center;
-  font-size: 1.4vw;
+  font-size: 1.6vw;
   font-weight: 800;
   margin: 1% auto;
+}
+
+.info__input {
+  border: none;
+  border-bottom: 2px solid var(--details-light);
+  outline: transparent;
+  font-size: 1.1vw;
+  padding: 5px;
+  margin: 10px 20px;
+}
+
+.list-enter-from, .list-leave-to {
+  opacity: 0;
+  transform: translateX(200px);
+}
+.list-enter-active, .list-leave-active {
+  transition: .4s ease;
+}
+.list-move {
+  transition: .4s ease;
 }

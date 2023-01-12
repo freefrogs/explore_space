@@ -34,6 +34,7 @@
         v-for="event in searchedEvents"
         :title="event.title"
         :date="event.event_date_utc"
+        :eventId="event.id"
         :key="event.id"
       />
     </transition-group>
@@ -46,7 +47,6 @@ import spacex from '@/services/spacex'
 import type { HistoryEvent } from '@/types/history'
 import HistoryCard from './HistoryCard.vue'
 
-
 export default defineComponent({
   components: { HistoryCard },
   setup () {
@@ -54,7 +54,6 @@ export default defineComponent({
     const getInfo = async () => {
       try {
         const res = await spacex.get('/v4/history')
-        console.log(res.data)
         historyEvents.value = res.data
       } catch(err) {
         console.error(err)

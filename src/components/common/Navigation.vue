@@ -1,25 +1,25 @@
 <template>
   <nav class="navigation">
-    <RouterLink
+    <router-link
       v-for="link in mainLinks"
       :key="link"
       class="navigation__link"
       :class="{'navigation__link--active': checkIfLinkIsActive(link)}"
       :to="{ name: link }"
-    >{{ link }}</RouterLink>
+    >{{ link }}</router-link>
     <div class="navigation-explore__box">
       <span
         class="navigation__link navigation__link--explore"
         :class="{'navigation__link--active': checkIfLinkIsActive('explore')}"
       >Explore</span>
       <div class="navigation-explore__links">
-        <RouterLink
+        <router-link
           v-for="link in exploreLinks"
           :key="link"
           class="navigation__link"
           :class="{'navigation__link--active': checkIfLinkIsActive(link)}"
           :to="{ name: link }"
-        >{{ link }}</RouterLink>
+        >{{ link }}</router-link>
       </div>
     </div>
   </nav>

@@ -31,6 +31,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/history/:id',
+      name: 'event',
+      components: {
+        default: () => import('../views/HistoryView.vue'),
+        stars: Stars,
+        info: () => import('../components/Event.vue'),
+      },
+      props: true
+    },
+    {
       path: '/starlink',
       name: 'starlink',
       components: {

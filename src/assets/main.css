@@ -89,6 +89,18 @@ a:active {
   margin: 1% auto;
 }
 
+.info__subheader {
+  font-size: 1vw;
+  margin: 1vw auto;
+  text-decoration: underline solid var(--details-light);
+}
+
+.info__paragraph {
+  font-size: 1.2vw;
+  line-height: 1.5;
+  margin: 1.2vw auto;
+}
+
 .info__input {
   border: none;
   border-bottom: 2px solid var(--details-light);
@@ -96,6 +108,20 @@ a:active {
   font-size: 1.1vw;
   padding: 5px;
   margin: 10px 20px;
+}
+
+.info__btn {
+  padding: 10px;
+  border: 1px solid var(--details-light);
+  border-radius: 6px;
+}
+
+.main__btn {
+  padding: 10px;
+  border: 2px solid var(--light);
+  background: var(--details-light);
+  outline: 2px solid var(--details-light);
+  border-radius: 6px;
 }
 
 .list-enter-from, .list-leave-to {

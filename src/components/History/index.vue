@@ -24,6 +24,7 @@
     </div>
     <transition-group
       name="list"
+      key="historyList"
       appear
       mode="out-in"
       tag="div"
@@ -46,6 +47,7 @@ import { defineComponent, ref, computed } from 'vue'
 import spacex from '@/services/spacex'
 import type { HistoryEvent } from '@/types/history'
 import HistoryCard from './HistoryCard.vue'
+import { getCurrentYear } from '@/utils/dataConversion'
 
 export default defineComponent({
   components: { HistoryCard },
@@ -61,8 +63,7 @@ export default defineComponent({
     }
     getInfo()
 
-    const currentYear = new Date().getFullYear()
-    const maxYear = Number(currentYear)
+    const maxYear = getCurrentYear()
 
     let search = ref<String>('')
     let searchYear = ref<Number>(2008)

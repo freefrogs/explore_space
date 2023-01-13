@@ -82,3 +82,11 @@ export interface Launch {
   links: LaunchesLinks,
   auto_update: boolean
 }
+
+export interface LaunchesFiltersData {
+  search: string,
+  yearFrom: number,
+  yearTo: number,
+  isSuccess: 'both'|'success'|'failure',
+  withCrew: 'both'|'with'|'without'
+}

@@ -30,8 +30,6 @@ export default defineComponent({
     const icon = computed(() => {
       return props.launch.success ? '✔' : '✖'
     })
-    const columns = [ 'id', 'name', 'success or failure', 'details']
-    const filters = ['with crew', 'isSuccess', 'search', 'year from', 'year to']
 
     return { eventDate, icon }
   }

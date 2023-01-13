@@ -6,6 +6,7 @@
   --light: #fff;
   --details-dark: #4c014c;
   --details-light: rgb(250, 225, 1);
+  --details-light-2: rgb(251, 246, 197);
   --shadow: 10px 10px 20px rgb(56, 55, 55);
 }
 
@@ -114,6 +115,7 @@ a:active {
   padding: 10px;
   border: 1px solid var(--details-light);
   border-radius: 6px;
+  background: var(--light);
 }
 
 .main__btn {

@@ -54,7 +54,7 @@ interface LaunchesLinks {
   wikipedia: string
 }
 
-export interface Launche {
+export interface Launch {
   id: string,
   flight_number: number,
   name: string,

@@ -14,6 +14,7 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 import { RouterLink } from 'vue-router'
+import { getShortDate } from '@/utils/dataConversion'
 
 export default defineComponent({
   components: { RouterLink },
@@ -33,8 +34,7 @@ export default defineComponent({
   },
   setup(props) {
     const eventDate = computed(() => {
-      const newDate = props.date.replace(/(T)|(Z)/g, ' ').trim()
-      return newDate.substring(0, newDate.lastIndexOf(" "))
+      return getShortDate(props.date)
     })
 
     return { eventDate }

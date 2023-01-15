@@ -70,7 +70,6 @@ export default defineComponent({
 
     const searchedEvents = computed(() => {
       if (!historyEvents.value.length) return []
-      console.log(search.value)
       return historyEvents.value.filter(el => {
         const checkTexts =  el.title.toLowerCase().includes(search.value.toLowerCase()) || el.details.toLowerCase().includes(search.value.toLowerCase())
         const checkYear = parseInt(el.event_date_utc.split('-')[0]) >= searchYear.value

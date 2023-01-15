@@ -2,6 +2,7 @@
   <div class="launches">
     <h3 class="info__header">Select launches criteria</h3>
     <launches-filters />
+    <p class="info__paragraph text__center">{{ searchedLaunches.length }} results:</p>
     <transition-group
       name="list"
       key="launchesList"
@@ -17,11 +18,16 @@
         <span>Date</span>
       </div>
       <launch-card
-        v-for="launch in searchedLaunches"
+        v-for="launch in currentSearchedLaunches"
         :launch="launch"
         :key="launch.id"
       />
     </transition-group>
+    <pagination
+      v-show="pages > 1"
+      :pageAmount="pages"
+      @activePageChange="updateSearchedLaunches"
+    />
   </div>
 </template>
 
@@ -33,10 +39,11 @@ import useLaunchesStore from '@/stores/launchesStore'
 import type { Launch } from '@/types/launches'
 import LaunchCard from './LaunchCard.vue'
 import LaunchesFilters from './LaunchesFilters.vue'
+import Pagination from '@/components/common/Pagination.vue'
 
 
 export default defineComponent({
-  components: { LaunchCard, LaunchesFilters },
+  components: { LaunchCard, LaunchesFilters, Pagination },
   setup () {
     const launches = ref<Launch[]>([])
     const getInfo = async () => {
@@ -85,7 +92,25 @@ export default defineComponent({
       return filteredLaunches
     })
 
-    return { searchedLaunches }
+    // Pagination handling
+    const pages = computed(() => {
+      return Math.ceil(searchedLaunches.value.length/10)
+    })
+
+    let currentPage = ref<Number>(1)
+
+    const updateSearchedLaunches = (el:number) => {
+      currentPage.value = el
+    }
+
+    const currentSearchedLaunches = computed(() => {
+      if (!searchedLaunches.value.length) return []
+      const start = currentPage.value as number * 10 - 10
+      const end = currentPage.value as number * 10
+      return searchedLaunches.value.slice(start, end)
+    })
+
+    return { searchedLaunches, pages, updateSearchedLaunches, currentSearchedLaunches }
   }
 })
 </script>

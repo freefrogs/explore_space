@@ -52,6 +52,10 @@
       </div>
       <p class="info__paragraph">{{ launchData.details }}</p>
       <launch-links :links="launchData.links" />
+      <slider
+        v-if="sliderImages.length"
+        :imagesArray="sliderImages"
+      />
     </div>
   </div>
 </template>
@@ -62,9 +66,10 @@ import spacex from '@/services/spacex'
 import type { Launch } from '@/types/launches'
 import LaunchLinks from './LaunchLinks.vue'
 import LaunchPartial from './LaunchPartial.vue'
+import Slider from '@/components/common/Slider.vue'
 
 export default defineComponent({
-  components: { LaunchLinks, LaunchPartial },
+  components: { LaunchLinks, LaunchPartial, Slider },
   props: ['id'],
   setup (props) {
     let launchData = ref<Launch>()
@@ -72,7 +77,6 @@ export default defineComponent({
       try {
         const res = await spacex.get(`v4/launches/${props.id}`)
         launchData.value = res.data
-        console.log(launchData.value)
       } catch (err) {
         console.error(err)
       }
@@ -93,7 +97,12 @@ export default defineComponent({
       return launchData.value.success ? '✔' : '✖'
     })
 
-    return { launchData, isPartials, launchDate, icon }
+    const sliderImages = computed(() => {
+      if (!launchData.value || !launchData.value.links || !launchData.value.links.flickr || !launchData.value.links.flickr.original || !launchData.value.links.flickr.original.length) return []
+      return launchData.value.links.flickr.original
+    })
+
+    return { launchData, isPartials, launchDate, icon, sliderImages }
   }
 })
 </script>

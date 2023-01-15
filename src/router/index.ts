@@ -50,6 +50,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/launches/:id',
+      name: 'launch',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars,
+        info: () => import('../components/Launch/index.vue'),
+      },
+      props: true
+    },
+    {
       path: '/crew',
       name: 'crew',
       components: {

@@ -32,7 +32,7 @@ interface Core {
   landpad: string
 }
 
-interface LaunchesLinks {
+export interface LaunchesLinks {
   patch: {
     small: string,
     large: string

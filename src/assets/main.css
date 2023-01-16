@@ -124,6 +124,16 @@ a:active {
   font-size: 1.1vw;
 }
 
+.info__circle {
+  display: inline-block;
+  text-align: center;
+  width: 2vw;
+  height: 2vw;
+  line-height: 2vw;
+  background: var(--details-light-2);
+  border-radius: 50%;
+}
+
 .main__btn {
   padding: 10px;
   border: 2px solid var(--light);

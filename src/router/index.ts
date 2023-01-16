@@ -69,6 +69,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/crew/:id',
+      name: 'crew_member',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars,
+        info: () => import('../components/CrewMember.vue'),
+      },
+      props: true
+    },
+    {
       path: '/capsules',
       name: 'capsules',
       components: {

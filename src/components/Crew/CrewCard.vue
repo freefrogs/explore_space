@@ -5,13 +5,10 @@
     <span>{{ crewMember.agency }}</span>
     <span>{{ crewMember.status }}</span>
     <span>
-      <span class="info__btn">
-        Details
-        <!-- <router-link
-          :to="{ name: 'crew', params: { id: crewMember.id } }"
-          class="info__btn"
-        >Details</router-link> -->
-      </span>
+      <router-link
+        :to="{ name: 'crew_member', params: { id: crewMember.id } }"
+        class="info__btn"
+      >Details</router-link>
     </span>
   </div>
 </template>
@@ -19,11 +16,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
+import { RouterLink } from 'vue-router'
 import type { Crew } from '@/types/crew'
 import HelmetIcon from './HelmetIcon.vue'
 
 export default defineComponent({
-  components: { HelmetIcon },
+  components: { HelmetIcon, RouterLink },
   props: {
     crewMember: {
       required: true,

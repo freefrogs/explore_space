@@ -26,14 +26,17 @@
         <launch-partial
           title="Crew members"
           :partialArray="launchData.crew"
+          routeName="crew_member"
         />
         <launch-partial
           title="Ships"
           :partialArray="launchData.ships"
+          routeName="ships"
         />
         <launch-partial
           title="Capsules"
           :partialArray="launchData.capsules"
+          routeName="capsules"
         />
       </div>
       <h5
@@ -43,11 +46,11 @@
       <div class="launch__box">
         <p>
           <span class="launch__box--title">Flight number: </span>
-          <span class="launch__box--circle">{{ launchData.flight_number }}</span>
+          <span class="info__circle">{{ launchData.flight_number }}</span>
         </p>
         <p>
           <span class="launch__box--title">Success: </span>
-          <span class="launch__box--circle">{{ icon }}</span>
+          <span class="info__circle">{{ icon }}</span>
         </p>
       </div>
       <p class="info__paragraph">{{ launchData.details }}</p>
@@ -120,15 +123,6 @@ export default defineComponent({
     align-items: center;
     &--title {
       font-weight: 800;
-    }
-    &--circle {
-      display: inline-block;
-      text-align: center;
-      width: 2vw;
-      height: 2vw;
-      line-height: 2vw;
-      background: var(--details-light-2);
-      border-radius: 50%;
     }
   }
   &__patch {

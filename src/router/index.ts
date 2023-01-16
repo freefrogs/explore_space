@@ -64,7 +64,8 @@ const router = createRouter({
       name: 'crew',
       components: {
         default: () => import('../views/ExploreView.vue'),
-        stars: Stars
+        stars: Stars,
+        info: () => import('../components/Crew/index.vue'),
       }
     },
     {

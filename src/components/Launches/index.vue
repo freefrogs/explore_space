@@ -10,7 +10,7 @@
       mode="out-in"
       tag="div"
       v-if="searchedLaunches.length"
-      class="launches__box"
+      class="info__box"
     >
       <div class="launches__grid launches__header">
         <span>Success?</span>
@@ -117,11 +117,6 @@ export default defineComponent({
 
 <style lang="scss">
 .launches {
-  &__box {
-    width: 80%;
-    margin: 1% auto;
-    font-size: 1.1vw;
-  }
   &__grid {
     display: grid;
     grid-template-columns: 1fr 3fr 2fr 1fr;

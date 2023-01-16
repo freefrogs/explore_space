@@ -22,6 +22,7 @@
         >
       </label>
     </div>
+    <p class="info__paragraph text__center">{{ searchedEvents.length }} results:</p>
     <transition-group
       name="list"
       key="historyList"

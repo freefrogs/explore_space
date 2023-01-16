@@ -1,8 +1,8 @@
 <template>
   <div class="launch-card launches__grid">
     <span class="launch-card__icon">{{ icon }}</span>
-    <span class="launch-card__name">{{ launch.name }}</span>
-    <span class="launch-card__date">{{ eventDate }}</span>
+    <span>{{ launch.name }}</span>
+    <span>{{ eventDate }}</span>
     <span>
       <router-link
         :to="{ name: 'launch', params: { id: launch.id } }"

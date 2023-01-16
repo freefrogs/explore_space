@@ -12,7 +12,7 @@
     <label>
       Success or failure:
       <select
-        class="info__select info__input"
+        class="info__input"
         v-model="isSuccess"
       >
         <option
@@ -25,7 +25,7 @@
     <label>
       With or without crew:
       <select
-        class="info__select info__input"
+        class="info__input"
         v-model="withCrew"
       >
       <option

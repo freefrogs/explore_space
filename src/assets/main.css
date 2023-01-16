@@ -118,6 +118,12 @@ a:active {
   background: var(--light);
 }
 
+.info__box {
+  width: 80%;
+  margin: 1% auto;
+  font-size: 1.1vw;
+}
+
 .main__btn {
   padding: 10px;
   border: 2px solid var(--light);

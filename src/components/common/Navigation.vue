@@ -42,9 +42,9 @@ export default defineComponent({
       'launches',
       'crew',
       'capsules',
-      'dragons',
       'rockets',
       'ships',
+      'dragons'
     ]
     const route = useRoute()
     const checkIfLinkIsActive = (routeName: RouteRecordName) => {

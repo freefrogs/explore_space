@@ -88,12 +88,14 @@ const router = createRouter({
       }
     },
     {
-      path: '/dragons',
-      name: 'dragons',
+      path: '/capsule/:id',
+      name: 'capsule',
       components: {
         default: () => import('../views/ExploreView.vue'),
-        stars: Stars
-      }
+        stars: Stars,
+        info: () => import('../components/Capsule.vue')
+      },
+      props: true
     },
     {
       path: '/rockets',
@@ -106,6 +108,14 @@ const router = createRouter({
     {
       path: '/ships',
       name: 'ships',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars
+      }
+    },
+    {
+      path: '/dragons',
+      name: 'dragons',
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars

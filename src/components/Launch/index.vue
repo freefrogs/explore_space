@@ -13,7 +13,7 @@
         :alt="`${launchData.name} patch`"
         class="launch__patch"
       />
-      <h3 class="info__header">{{ launchData.name }}</h3>
+      <h3 class="info__header">Launch {{ launchData.name }}</h3>
       <div
         class="launch__box"
         v-if="isPartials"
@@ -36,7 +36,7 @@
         <launch-partial
           title="Capsules"
           :partialArray="launchData.capsules"
-          routeName="capsules"
+          routeName="capsule"
         />
       </div>
       <h5

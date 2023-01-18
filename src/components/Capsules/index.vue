@@ -68,7 +68,7 @@ export default defineComponent({
         const res = await spacex.get('/v4/capsules')
         capsulesList.value = res.data
       } catch (err) {
-        console.log(err)
+        console.error(err)
       }
     }
     getInfo()

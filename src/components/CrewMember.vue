@@ -53,7 +53,6 @@ export default defineComponent({
       try {
         const res = await spacex.get(`/v4/crew/${props.id}`)
         memberData.value = res.data
-        console.log(memberData)
       } catch (err) {
         console.error(err)
       }

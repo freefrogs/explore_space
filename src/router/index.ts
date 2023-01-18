@@ -102,7 +102,8 @@ const router = createRouter({
       name: 'rockets',
       components: {
         default: () => import('../views/ExploreView.vue'),
-        stars: Stars
+        stars: Stars,
+        info: () => import('../components/Rockets/index.vue')
       }
     },
     {

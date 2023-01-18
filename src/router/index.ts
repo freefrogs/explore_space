@@ -18,7 +18,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/AboutView.vue'),
         stars: Stars,
-        info: () => import('../components/About/index.vue'),
+        info: () => import('../components/About/index.vue')
       }
     },
     {
@@ -27,7 +27,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/HistoryView.vue'),
         stars: Stars,
-        info: () => import('../components/History/index.vue'),
+        info: () => import('../components/History/index.vue')
       }
     },
     {
@@ -36,7 +36,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/HistoryView.vue'),
         stars: Stars,
-        info: () => import('../components/Event.vue'),
+        info: () => import('../components/Event.vue')
       },
       props: true
     },
@@ -46,7 +46,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars,
-        info: () => import('../components/Launches/index.vue'),
+        info: () => import('../components/Launches/index.vue')
       }
     },
     {
@@ -55,7 +55,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars,
-        info: () => import('../components/Launch/index.vue'),
+        info: () => import('../components/Launch/index.vue')
       },
       props: true
     },
@@ -65,7 +65,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars,
-        info: () => import('../components/Crew/index.vue'),
+        info: () => import('../components/Crew/index.vue')
       }
     },
     {
@@ -74,7 +74,7 @@ const router = createRouter({
       components: {
         default: () => import('../views/ExploreView.vue'),
         stars: Stars,
-        info: () => import('../components/CrewMember.vue'),
+        info: () => import('../components/CrewMember.vue')
       },
       props: true
     },
@@ -83,7 +83,8 @@ const router = createRouter({
       name: 'capsules',
       components: {
         default: () => import('../views/ExploreView.vue'),
-        stars: Stars
+        stars: Stars,
+        info: () => import('../components/Capsules/index.vue')
       }
     },
     {

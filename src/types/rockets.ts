@@ -74,7 +74,7 @@ export interface Rocket {
   engines: Engines,
   landing_legs: {
     number: number,
-    material: object
+    material: string
   },
   flickr_images: string[],
   wikipedia: string,

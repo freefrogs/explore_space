@@ -107,6 +107,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/rockets/:id',
+      name: 'rocket',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars,
+        info: () => import('../components/Rocket/index.vue')
+      },
+      props: true
+    },
+    {
       path: '/ships',
       name: 'ships',
       components: {

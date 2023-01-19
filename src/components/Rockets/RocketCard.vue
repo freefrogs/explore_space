@@ -6,11 +6,10 @@
     <span>{{ rocket.mass.kg }}</span>
     <span>{{ rocket.engines.number }}</span>
     <span>
-      <span class="info__btn">Details</span>
-      <!-- <router-link
+      <router-link
         :to="{ name: 'rocket', params: { id: rocket.id } }"
         class="info__btn"
-      >Details</router-link> -->
+      >Details</router-link>
     </span>
   </div>
 </template>
@@ -18,11 +17,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
-// import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import type { Rocket } from '@/types/rockets'
 
 export default defineComponent({
-  // components: { RouterLink },
+  components: { RouterLink },
   props: {
     rocket: {
       required: true,

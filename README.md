@@ -1,56 +1,12 @@
-# env-full
+## :construction:Explore Space:construction:
 
-This template should help get you started developing with Vue 3 in Vite.
+### Used technologies:
+* Vite, Vue 3, Pinia, vue-router, 
+* TypeScript
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-
-rakieta: https://codepen.io/xfry/pen/abwLJZ
-atom: https://codepen.io/mr_alien/pen/ExPwxq
-loadery: https://codepen.io/jkantner/pen/YzzgWRY
-space: https://codepen.io/chriskschneider/pen/GgPeOe
-shooting stars: https://codepen.io/ericdjohnson/pen/yLYqaLr/759b40b1e7a7d1f7fd0855c08a8ecbb6
-maybe loader: https://codepen.io/Amaj/pen/azXvXY
-shape morph :https://codepen.io/kunj4u/pen/vrQzjy
-
-https://pl.pinterest.com/pin/69805862964145090/
+### Sources & credits:
+* [SpaceX-API](https://github.com/r-spacex/SpaceX-API),
+* [stars](https://codepen.io/chriskschneider/pen/GgPeOe),
+* [shape morph](https://codepen.io/kunj4u/pen/vrQzjy),
+* UI inspired by [pinterest pin](https://pl.pinterest.com/pin/69805862964145090/),
+* [maybe loader](https://codepen.io/Amaj/pen/azXvXY),

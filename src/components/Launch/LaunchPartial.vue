@@ -4,42 +4,36 @@
     class="launch__box"
   >
     <span class="launch__box--title">{{ title }}:</span>
-    <span
+    <router-link
       v-for="(el, index) in partialArray"
-      :data-rocket="el"
-      :key="`${title}${index}`"
-      class="info__circle"
-    >{{ index + 1 }}</span>
-    <!-- <router-link
-      v-for="(el, index) in partialArray"
-      :to="{ name: routeName, params: { id: el } }"
+      :to="{ name: pathName, params: { id: el } }"
       class="info__circle"
       :key="`${title}${index}`"
-      :data-el="el"
-    >{{ index + 1 }}</router-link> -->
+    >{{ index + 1 }}</router-link>
   </p>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
-// import { RouterLink } from 'vue-router'
+import type { RouteParamValueRaw } from 'vue-router'
+import { RouterLink } from 'vue-router'
 
 export default defineComponent({
-  // components: { RouterLink },
+  components: { RouterLink },
   props: {
     partialArray: {
       required: true,
-      type: Array as PropType<String[]>
+      type: Array as PropType<RouteParamValueRaw[]>
     },
     title: {
       required: true,
       type: String
-    }/* ,
-    routeName: {
+    },
+    pathName: {
       required: true,
       type: String
-    } */
+    }
   }
 })
 </script>

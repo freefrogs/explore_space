@@ -88,7 +88,7 @@ const router = createRouter({
       }
     },
     {
-      path: '/capsule/:id',
+      path: '/capsules/:id',
       name: 'capsule',
       components: {
         default: () => import('../views/ExploreView.vue'),

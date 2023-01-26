@@ -18,25 +18,25 @@
         class="launch__box"
         v-if="isPartials"
       >
-        <span
+        <router-link
           v-if="launchData.rocket"
-          :data-rocket="launchData.rocket"
           class="launch__box--title"
-        >Rocket</span>
+          :to="{ name: 'rocket', params: { id: launchData.rocket } }"
+        >Rocket</router-link>
         <launch-partial
           title="Crew members"
           :partialArray="launchData.crew"
-          routeName="crew_member"
+          pathName="crew_member"
         />
         <launch-partial
           title="Ships"
           :partialArray="launchData.ships"
-          routeName="ships"
+          pathName="ship"
         />
         <launch-partial
           title="Capsules"
           :partialArray="launchData.capsules"
-          routeName="capsule"
+          pathName="capsule"
         />
       </div>
       <h5
@@ -67,12 +67,13 @@
 import { defineComponent, ref, computed } from 'vue'
 import spacex from '@/services/spacex'
 import type { Launch } from '@/types/launches'
+import { RouterLink } from 'vue-router'
 import LaunchLinks from './LaunchLinks.vue'
 import LaunchPartial from './LaunchPartial.vue'
 import Slider from '@/components/common/Slider.vue'
 
 export default defineComponent({
-  components: { LaunchLinks, LaunchPartial, Slider },
+  components: { LaunchLinks, LaunchPartial, Slider, RouterLink },
   props: ['id'],
   setup (props) {
     let launchData = ref<Launch>()

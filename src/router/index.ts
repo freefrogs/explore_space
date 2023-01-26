@@ -126,6 +126,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/ships/:id',
+      name: 'ship',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars,
+        info: () => import('../components/Ship/index.vue')
+      },
+      props: true
+    },
+    {
       path: '/dragons',
       name: 'dragons',
       components: {

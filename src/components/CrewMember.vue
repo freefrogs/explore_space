@@ -10,13 +10,13 @@
         <img
           :src="memberData.image"
           :alt="memberData.name"
-          class="crew-member__image"
+          class="crew-member__image info__image"
         >
-        <div class="crew-member__details">
-          <p><span class="crew-member__title">Agency: </span>{{ memberData.agency }}</p>
-          <p><span class="crew-member__title">Status: </span>{{ memberData.status }}</p>
+        <div class="info__details">
+          <p><strong>Agency: </strong>{{ memberData.agency }}</p>
+          <p><strong>Status: </strong>{{ memberData.status }}</p>
           <p>
-            <span class="crew-member__title">Launches: </span>
+            <strong>Launches: </strong>
             <router-link
               v-for="(el, index) in memberData.launches"
               :to="{ name: 'launch', params: { id: el } }"
@@ -73,21 +73,6 @@ export default defineComponent({
   }
   &__image {
     width: 30%;
-    height: auto;
-    border-radius: 20px 0 0 20px;
-    padding-right: 20px;
-    border-right: 3px solid var(--details-light);
-  }
-  &__title {
-    font-weight: 800;
-  }
-  &__details {
-    padding-left: 40px;
-    font-size: 1.4vw;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
   }
 }
 </style>

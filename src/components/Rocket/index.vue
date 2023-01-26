@@ -2,7 +2,7 @@
   <div class="rocket">
     <p
       v-if="!rocketData"
-      class="info__paragraph"
+      class="info__paragraph text__center"
     >Waiting for data...</p>
     <div
       v-else

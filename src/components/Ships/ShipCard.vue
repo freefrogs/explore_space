@@ -4,11 +4,10 @@
     <span>{{ ship.type }}</span>
     <span>{{ ship.year_built ? ship.year_built : '?' }}</span>
     <span>
-      <span class="info__btn">Details</span>
-      <!-- <router-link
+      <router-link
         :to="{ name: 'ship', params: { id: ship.id } }"
         class="info__btn"
-      >Details</router-link> -->
+      >Details</router-link>
     </span>
   </div>
 </template>
@@ -16,11 +15,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
-// import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import type { Ship } from '@/types/ships'
 
 export default defineComponent({
-  // components: { RouterLink },
+  components: { RouterLink },
   props: {
     ship: {
       required: true,

@@ -2,7 +2,7 @@
   <div class="launch">
     <p
       v-if="!launchData"
-      class="info__paragraph"
+      class="info__paragraph text__center"
     >Waiting for data...</p>
     <div
       v-else

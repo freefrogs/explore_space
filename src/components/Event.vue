@@ -2,7 +2,7 @@
   <div class="event text__center">
     <p
       v-if="!event"
-      class="info__paragraph"
+      class="info__paragraph text__center"
     >Waiting for data...</p>
     <div v-else>
       <h3 class="info__header">{{ event.title }}</h3>

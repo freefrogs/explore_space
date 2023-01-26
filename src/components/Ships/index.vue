@@ -89,7 +89,7 @@ export default defineComponent({
 .ships {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 2fr 1fr 1fr;
     align-items: center;
     justify-items: center;
     padding: 20px 0;

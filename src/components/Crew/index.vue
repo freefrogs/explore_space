@@ -35,11 +35,11 @@
       v-if="crewList.length"
       class="info__box"
     >
-      <div class="crew__grid crew__header">
+      <div class="crew__grid">
         <span></span>
-        <span>Name</span>
-        <span>Agency</span>
-        <span>Status</span>
+        <strong>Name</strong>
+        <strong>Agency</strong>
+        <strong>Status</strong>
       </div>
       <crew-card
         v-for="member in searchedCrewMembers"
@@ -101,9 +101,6 @@ export default defineComponent({
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
     align-items: center;
     padding: 10px;
-  }
-  &__header * {
-    font-weight: 800;
   }
 }
 </style>

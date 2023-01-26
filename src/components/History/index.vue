@@ -34,9 +34,7 @@
     >
       <history-card
         v-for="event in searchedEvents"
-        :title="event.title"
-        :date="event.event_date_utc"
-        :eventId="event.id"
+        :historyEvent="event"
         :key="event.id"
       />
     </transition-group>

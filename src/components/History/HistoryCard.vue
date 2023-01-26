@@ -2,11 +2,11 @@
   <div class="history__card">
     <p class="history__card--desc">
       <span class="history__card--date">{{ eventDate }}</span>
-      <span class="history__card--title">{{ title }}</span>
+      <span class="history__card--title">{{ historyEvent.title }}</span>
     </p>
     <router-link
       class="info__btn history__card--link"
-      :to="{ name: 'event', params: { id: eventId } }"
+      :to="{ name: 'event', params: { id: historyEvent.id } }"
     >read more</router-link>
   </div>
 </template>
@@ -15,26 +15,21 @@
 import { defineComponent, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { getShortDate } from '@/utils/dataConversion'
+import type { PropType } from 'vue'
+import type { HistoryEvent } from '@/types/history'
+
 
 export default defineComponent({
   components: { RouterLink },
   props: {
-    title: {
+    historyEvent: {
       required: true,
-      type: String
-    },
-    date: {
-      required: true,
-      type: String
-    },
-    eventId: {
-      required: true,
-      type: String
+      type: Object as PropType<HistoryEvent>
     }
   },
   setup(props) {
     const eventDate = computed(() => {
-      return getShortDate(props.date)
+      return getShortDate(props.historyEvent.event_date_utc)
     })
 
     return { eventDate }

@@ -1,5 +1,5 @@
 <template>
-  <div class="rockets__grid rockets__card">
+  <div class="rockets__grid info-card">
     <span>{{ rocket.name }}</span>
     <span>{{ rocket.height.meters }}</span>
     <span>{{ rocket.diameter.meters }}</span>
@@ -30,11 +30,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss">
-.rockets__card {
-  &:nth-child(even) {
-    background: var(--details-light-2);
-  }
-}
-</style>

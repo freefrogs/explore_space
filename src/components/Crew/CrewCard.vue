@@ -1,15 +1,15 @@
 <template>
-  <div class="crew-card crew__grid">
+  <div class="crew-card crew__grid info-card">
     <helmet-icon />
-    <span>{{ crewMember.name }}</span>
-    <span>{{ crewMember.agency }}</span>
-    <span>{{ crewMember.status }}</span>
-    <span>
+    <strong>{{ crewMember.name }}</strong>
+    <strong>{{ crewMember.agency }}</strong>
+    <strong>{{ crewMember.status }}</strong>
+    <strong>
       <router-link
         :to="{ name: 'crew_member', params: { id: crewMember.id } }"
         class="info__btn"
       >Details</router-link>
-    </span>
+    </strong>
   </div>
 </template>
 
@@ -37,9 +37,6 @@ export default defineComponent({
     margin-left: 20px;
     height: auto;
     width: 50px;
-  }
-  &:nth-child(even) {
-    background: var(--details-light-2);
   }
 }
 </style>

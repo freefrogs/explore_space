@@ -1,18 +1,65 @@
 <template>
   <div class="ships">
     <h3 class="info__header">Check out ships info</h3>
-    <p class="info__paragraph text__center">{{ shipsList.length }} results:</p>
+    <p class="info__paragraph text__center">{{ searchedShips.length }} results:</p>
+    <div class="ships__filters text__center">
+      <label>
+        Enter phrase:
+        <input
+          class="info__input"
+          type="text"
+          v-model="search"
+          placeholder="search for..."
+        >
+      </label>
+      <label>
+        Year built from:
+        <input
+          class="info__input"
+          type="number"
+          min="1940"
+          :max="maxYear"
+          v-model="searchYear"
+        >
+      </label>
+    </div>
+    <transition-group
+      name="list"
+      key="ShipsList"
+      appear
+      mode="out-in"
+      tag="div"
+      v-if="searchedShips.length"
+      class="info__box"
+    >
+      <div class="ships__grid">
+        <strong>Name</strong>
+        <strong>Type</strong>
+        <strong>Year Built</strong>
+      </div>
+      <ship-card
+        v-for="ship in searchedShips"
+        :ship="ship"
+        :key="ship.id"
+      />
+    </transition-group>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 import spacex from '@/services/spacex'
 import type { Ship } from '@/types/ships'
+import { getCurrentYear } from '@/utils/dataConversion'
+import ShipCard from './ShipCard.vue'
 
 export default defineComponent({
+  components: { ShipCard },
   setup () {
     const shipsList = ref<Ship[]>([])
+    const search = ref<string>('')
+    const searchYear = ref<number>(1944)
+    const maxYear = getCurrentYear()
 
     const getInfo = async () => {
       try {
@@ -24,7 +71,28 @@ export default defineComponent({
     }
     getInfo()
 
-    return { shipsList }
+    const searchedShips = computed(() => {
+      if (!shipsList.value.length) return []
+      return shipsList.value.filter(el => {
+        const checkName = el.name.toLowerCase().includes(search.value.toLowerCase())
+        const checkYear = el.year_built >= searchYear.value || el.year_built === null
+        return checkName && checkYear
+      })
+    })
+    
+    return { search, maxYear, searchYear, searchedShips }
   }
 })
 </script>
+
+<style lang="scss">
+.ships {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 20px 0;
+  }
+}
+</style>

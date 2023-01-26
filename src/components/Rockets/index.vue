@@ -6,12 +6,12 @@
       v-if="rocketsList.length"
       class="info__box"
     >
-      <div class="rockets__grid rockets__header">
-        <span>Name</span>
-        <span>Height [m]</span>
-        <span>Diameter [m]</span>
-        <span>Mass [kg]</span>
-        <span>Engines</span>
+      <div class="rockets__grid">
+        <strong>Name</strong>
+        <strong>Height [m]</strong>
+        <strong>Diameter [m]</strong>
+        <strong>Mass [kg]</strong>
+        <strong>Engines</strong>
       </div>
       <rocket-card
         v-for="rocket in rocketsList"
@@ -55,9 +55,6 @@ export default defineComponent({
     align-items: center;
     justify-items: center;
     padding: 20px 0;
-  }
-  &__header * {
-    font-weight: 800;
   }
 }
 </style>

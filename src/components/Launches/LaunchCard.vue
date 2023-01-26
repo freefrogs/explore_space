@@ -1,5 +1,5 @@
 <template>
-  <div class="launch-card launches__grid">
+  <div class="launch-card info-card launches__grid">
     <span class="launch-card__icon">{{ icon }}</span>
     <span>{{ launch.name }}</span>
     <span>{{ eventDate }}</span>
@@ -46,9 +46,6 @@ export default defineComponent({
   &__icon {
     font-size: 1.6vw;
     padding-left: 1.6vw;
-  }
-  &:nth-child(even) {
-    background: var(--details-light-2);
   }
 }
 </style>

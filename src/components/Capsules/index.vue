@@ -39,10 +39,10 @@
       v-if="searchedCapsules.length"
       class="info__box"
     >
-      <div class="capsules__grid capsules__header">
-        <span>Serial</span>
-        <span>Type</span>
-        <span>Status</span>
+      <div class="capsules__grid">
+        <strong>Serial</strong>
+        <strong>Type</strong>
+        <strong>Status</strong>
       </div>
       <capsule-card
         v-for="capsule in searchedCapsules"
@@ -100,9 +100,6 @@ export default defineComponent({
     align-items: center;
     justify-items: center;
     padding: 20px 0;
-  }
-  &__header * {
-    font-weight: 800;
   }
 }
 </style>

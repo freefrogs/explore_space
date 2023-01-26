@@ -12,10 +12,10 @@
       v-if="searchedLaunches.length"
       class="info__box"
     >
-      <div class="launches__grid launches__header">
-        <span>Success?</span>
-        <span>Name</span>
-        <span>Date</span>
+      <div class="launches__grid">
+        <strong>Success?</strong>
+        <strong>Name</strong>
+        <strong>Date</strong>
       </div>
       <launch-card
         v-for="launch in currentSearchedLaunches"
@@ -122,9 +122,6 @@ export default defineComponent({
     grid-template-columns: 1fr 3fr 2fr 1fr;
     align-items: center;
     padding: 20px 0;
-  }
-  &__header * {
-    font-weight: 800;
   }
 }
 </style>

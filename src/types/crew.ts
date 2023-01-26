@@ -6,11 +6,11 @@ enum Status {
 }
 
 export interface Crew {
-  name: string,
-  agency: string,
-  image: string,
-  wikipedia: string,
-  launches: string[],
-  status: Status,
-  id: string
+  name: string;
+  agency: string;
+  image: string;
+  wikipedia: string;
+  launches: string[];
+  status: Status;
+  id: string;
 }

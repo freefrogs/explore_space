@@ -1,7 +1,7 @@
 interface Star {
-  top: string,
-  left: string,
-  delay: string
+  top: string;
+  left: string;
+  delay: string;
 }
 
 export default Star

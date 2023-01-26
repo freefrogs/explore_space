@@ -10,3 +10,7 @@
 * [shape morph](https://codepen.io/kunj4u/pen/vrQzjy),
 * UI inspired by [pinterest pin](https://pl.pinterest.com/pin/69805862964145090/),
 * [maybe loader](https://codepen.io/Amaj/pen/azXvXY),
+
+https://www.youtube.com/watch?v=i_XbW-FsLKk
+https://dev.to/shashannkbawa/deploying-vite-app-to-github-pages-3ane
+https://huishun.medium.com/how-to-deploy-a-vue-js-application-with-dynamic-routing-on-github-pages-3d36f4644e54

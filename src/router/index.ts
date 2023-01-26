@@ -121,7 +121,8 @@ const router = createRouter({
       name: 'ships',
       components: {
         default: () => import('../views/ExploreView.vue'),
-        stars: Stars
+        stars: Stars,
+        info: () => import('../components/Ships/index.vue')
       }
     },
     {

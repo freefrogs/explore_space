@@ -12,13 +12,13 @@ enum CapsuleType {
 }
 
 export interface Capsule {
-  reuse_count: number,
-  water_landings: number,
-  land_landings: number,
-  last_update: string,
-  launches: string[],
-  serial: string,
-  status: CapsuleStatus,
-  type: CapsuleType,
-  id: string
+  reuse_count: number;
+  water_landings: number;
+  land_landings: number;
+  last_update: string;
+  launches: string[];
+  serial: string;
+  status: CapsuleStatus;
+  type: CapsuleType;
+  id: string;
 }

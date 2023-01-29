@@ -6,7 +6,7 @@
       v-if="rocketsList.length"
       class="info__box"
     >
-      <div class="rockets__grid">
+      <div class="rockets__grid info__grid">
         <strong>Name</strong>
         <strong>Height [m]</strong>
         <strong>Diameter [m]</strong>
@@ -50,11 +50,7 @@ export default defineComponent({
 <style lang="scss">
 .rockets {
   &__grid {
-    display: grid;
     grid-template-columns: repeat(6, 1fr);
-    align-items: center;
-    justify-items: center;
-    padding: 20px 0;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="rockets__grid info-card">
+  <div class="rockets__grid info-card info__grid">
     <span>{{ rocket.name }}</span>
     <span>{{ rocket.height.meters }}</span>
     <span>{{ rocket.diameter.meters }}</span>

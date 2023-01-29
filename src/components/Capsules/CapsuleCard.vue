@@ -1,5 +1,5 @@
 <template>
-  <div class="info-card capsules__grid">
+  <div class="info-card capsules__grid info__grid">
     <span>{{ capsule.serial }}</span>
     <span>{{ capsule.type }}</span>
     <span>{{ capsule.status }}</span>

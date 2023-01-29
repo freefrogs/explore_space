@@ -140,7 +140,8 @@ const router = createRouter({
       name: 'dragons',
       components: {
         default: () => import('../views/ExploreView.vue'),
-        stars: Stars
+        stars: Stars,
+        info: () => import('../components/Dragons/index.vue')
       }
     },
     {

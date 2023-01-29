@@ -1,17 +1,4 @@
-interface LengthUnit {
-  meters: number;
-  feet: number;
-}
-
-interface MassUnit {
-  kg: number;
-  lb: number;
-}
-
-interface ForceUnit {
-  kN: number;
-  lbf: number;
-}
+import type { LengthUnit, MassUnit, ForceUnit } from './common';
 
 interface Stage {
   reusable: boolean;

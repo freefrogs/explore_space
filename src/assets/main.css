@@ -159,6 +159,13 @@ strong {
   justify-content: center;
 }
 
+.info__grid {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 20px 0;
+}
+
 .main__btn {
   padding: 10px;
   border: 2px solid var(--light);

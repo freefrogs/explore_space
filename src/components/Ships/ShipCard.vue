@@ -1,5 +1,5 @@
 <template>
-  <div class="ships__grid ships-card info-card">
+  <div class="ships__grid info__grid ships-card info-card">
     <span>{{ ship.name }}</span>
     <span>{{ ship.type }}</span>
     <span>{{ ship.year_built ? ship.year_built : '?' }}</span>

@@ -15,7 +15,7 @@
       />
       <h3 class="info__header">Launch {{ launchData.name }}</h3>
       <div
-        class="launch__box"
+        class="launch__box launch__box--gap"
         v-if="isPartials"
       >
         <router-link
@@ -120,10 +120,12 @@ export default defineComponent({
   }
   &__box {
     display: flex;
-    gap: 20px;
     align-items: center;
     &--title {
       font-weight: 800;
+    }
+    &--gap {
+      gap: 20px;
     }
   }
   &__patch {

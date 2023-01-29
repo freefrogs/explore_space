@@ -39,7 +39,7 @@
       v-if="searchedCapsules.length"
       class="info__box"
     >
-      <div class="capsules__grid">
+      <div class="capsules__grid info__grid">
         <strong>Serial</strong>
         <strong>Type</strong>
         <strong>Status</strong>
@@ -95,11 +95,7 @@ export default defineComponent({
 <style lang="scss">
 .capsules {
   &__grid {
-    display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    padding: 20px 0;
   }
 }
 </style>

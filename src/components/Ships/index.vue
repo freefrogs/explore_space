@@ -32,7 +32,7 @@
       v-if="searchedShips.length"
       class="info__box"
     >
-      <div class="ships__grid">
+      <div class="ships__grid info__grid">
         <strong>Name</strong>
         <strong>Type</strong>
         <strong>Year Built</strong>
@@ -88,11 +88,7 @@ export default defineComponent({
 <style lang="scss">
 .ships {
   &__grid {
-    display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    padding: 20px 0;
   }
 }
 </style>

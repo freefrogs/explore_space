@@ -49,6 +49,10 @@ strong {
   font-weight: 800;
 }
 
+ul {
+  list-style: none;
+}
+
 .text__center {
   text-align: center;
 }
@@ -164,6 +168,21 @@ strong {
   align-items: center;
   justify-items: center;
   padding: 20px 0;
+}
+
+.info__table {
+  background: var(--details-light);
+  display: grid;
+  gap: 2px;
+  margin: 2% auto;
+  border: 2px solid var(--details-light);
+}
+
+.info__cell {
+  background: var(--light);
+  text-align: center;
+  font-size: 1vw;
+  padding: 1vw 5px;
 }
 
 .main__btn {

@@ -5,11 +5,10 @@
     <span>{{ dragon.dry_mass_kg }}</span>
     <span>{{ dragon.diameter.meters }}</span>
     <span>
-      <span class="info__btn">Details</span>
-      <!-- <router-link
+      <router-link
         :to="{ name: 'dragon', params: { id: dragon.id } }"
         class="info__btn"
-      >Details</router-link> -->
+      >Details</router-link>
     </span>
   </div>
 </template>
@@ -18,10 +17,10 @@
 import { defineComponent } from 'vue'
 import type { Dragon } from '@/types/dragons'
 import type { PropType } from 'vue'
-// import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router'
 
 export default defineComponent({
-  // components: { RouterLink },
+  components: { RouterLink },
   props: {
     dragon: {
       required: true,

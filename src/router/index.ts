@@ -145,6 +145,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/dragons/:id',
+      name: 'dragon',
+      components: {
+        default: () => import('../views/ExploreView.vue'),
+        stars: Stars,
+        info: () => import('../components/Dragon/index.vue')
+      },
+      props: true
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'notFound',
       component: () => import('../views/NotFoundView.vue')

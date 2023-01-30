@@ -1,6 +1,6 @@
 <template>
   <p
-    class="launch__box"
+    class="launch__box launch__box--gap"
     v-if="isLinks"
   >
     <span class="launch__box--title">Links: </span>

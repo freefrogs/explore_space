@@ -1,15 +1,15 @@
 <template>
   <div class="crew-card crew__grid info-card">
     <helmet-icon />
-    <strong>{{ crewMember.name }}</strong>
-    <strong>{{ crewMember.agency }}</strong>
-    <strong>{{ crewMember.status }}</strong>
-    <strong>
+    <span>{{ crewMember.name }}</span>
+    <span>{{ crewMember.agency }}</span>
+    <span>{{ crewMember.status }}</span>
+    <span>
       <router-link
         :to="{ name: 'crew_member', params: { id: crewMember.id } }"
         class="info__btn"
       >Details</router-link>
-    </strong>
+    </span>
   </div>
 </template>
 

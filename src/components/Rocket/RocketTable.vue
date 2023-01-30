@@ -1,39 +1,39 @@
 <template>
-  <div class="rocket__table">
-    <p class="rocket__cell">
-      <span class="rocket__header">Engines number: </span>
+  <div class="rocket__table info__table">
+    <p class="info__cell">
+      <strong>Engines number: </strong>
       {{ rocket.engines.number || 'no data' }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">Engines type: </span>
+    <p class="info__cell">
+      <strong>Engines type: </strong>
       {{ rocket.engines.type || 'no data' }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">Engines version: </span>
+    <p class="info__cell">
+      <strong>Engines version: </strong>
       {{ rocket.engines.version || 'no data' }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">Propellants: </span>
+    <p class="info__cell">
+      <strong>Propellants: </strong>
       {{ fuel }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">{{ legs.header }}</span>
+    <p class="info__cell">
+      <strong>{{ legs.header }}</strong>
       {{ legs.text }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">Active: </span>
+    <p class="info__cell">
+      <strong>Active: </strong>
       {{ rocket.active ? '✔' : '✖' }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">First flight: </span>
+    <p class="info__cell">
+      <strong>First flight: </strong>
       {{ rocket.first_flight || 'no data' }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">Country: </span>
+    <p class="info__cell">
+      <strong>Country: </strong>
       {{ rocket.country || 'no data' }}
     </p>
-    <p class="rocket__cell">
-      <span class="rocket__header">Company: </span>
+    <p class="info__cell">
+      <strong>Company: </strong>
       {{ rocket.company || 'no data' }}
     </p>
   </div>
@@ -90,22 +90,7 @@ export default defineComponent({
 .rocket {
   &__table {
     width: 70%;
-    background: var(--details-light);
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin: 2% auto;
-    border: 2px solid var(--details-light);
-  }
-  &__cell {
-    background: var(--light);
-    text-align: center;
-    padding-top: 1vw;
-    font-size: 1vw;
-    padding: 1vw 5px 5px;
-  }
-  &__header {
-    font-weight: 800;
   }
 }
 </style>

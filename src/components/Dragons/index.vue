@@ -36,7 +36,6 @@ export default defineComponent({
       try {
         const res = await spacex.get('/v4/dragons/')
         dragonsList.value = res.data
-        console.log(dragonsList.value)
       } catch (err) {
         console.error(err)
       }

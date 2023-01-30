@@ -52,7 +52,7 @@ import { defineComponent, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import spacex from '@/services/spacex'
 import type { Ship } from '@/types/ships'
-import ShipImage from './shipImage.vue'
+import ShipImage from './ShipImage.vue'
 
 export default defineComponent({
   components: { RouterLink, ShipImage },

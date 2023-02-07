@@ -1,9 +1,6 @@
 <template>
   <div class="crew-member">
-    <p
-      v-if="!memberData"
-      class="info__paragraph text-center"
-    >Waiting for data...</p>
+    <loader v-if="!memberData" />
     <div v-else>
       <h3 class="info__header">{{ memberData.name }}</h3>
       <div class="crew-member__box">
@@ -43,9 +40,10 @@ import { defineComponent, ref } from 'vue'
 import spacex from '@/services/spacex'
 import { RouterLink } from 'vue-router'
 import type { Crew } from '@/types/crew'
+import Loader from '@/components/common/Loader.vue'
 
 export default defineComponent({
-  components: { RouterLink },
+  components: { RouterLink, Loader },
   props: ['id'],
   setup (props) {
     let memberData = ref<Crew>()

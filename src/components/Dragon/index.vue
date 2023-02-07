@@ -1,9 +1,6 @@
 <template>
   <div class="dragon text__center">
-    <p
-      v-if="!dragonData"
-      class="info__paragraph"
-    >Waiting for data...</p>
+    <loader v-if="!dragonData" />
     <div
       v-else
       class="dragon__main"
@@ -36,9 +33,10 @@ import type { Dragon } from '@/types/dragons'
 import Slider from '@/components/common/Slider.vue'
 import DragonTable from './DragonTable.vue'
 import DragonDetails from './DragonDetails.vue'
+import Loader from '@/components/common/Loader.vue'
 
 export default defineComponent({
-  components: { Slider, DragonTable, DragonDetails },
+  components: { Slider, DragonTable, DragonDetails, Loader },
   props: ['id'],
   setup (props) {
     const dragonData = ref<Dragon>()

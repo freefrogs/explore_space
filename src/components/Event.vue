@@ -1,9 +1,6 @@
 <template>
   <div class="event text__center">
-    <p
-      v-if="!event"
-      class="info__paragraph text__center"
-    >Waiting for data...</p>
+    <loader v-if="!event" />
     <div v-else>
       <h3 class="info__header">{{ event.title }}</h3>
       <h5 class="info__subheader">Date: {{ eventDate }}</h5>
@@ -23,8 +20,10 @@
 import { defineComponent, ref, computed } from 'vue'
 import spacex from '@/services/spacex'
 import type { HistoryEvent } from '@/types/history'
+import Loader from '@/components/common/Loader.vue'
 
 export default defineComponent({
+  components: { Loader },
   props: ['id'],
   setup (props) {
     let event = ref<HistoryEvent>()

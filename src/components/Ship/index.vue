@@ -1,9 +1,6 @@
 <template>
   <div class="ship">
-    <p
-      v-if="!shipData"
-      class="info__paragraph text__center"
-    >Waiting for data...</p>
+    <loader v-if="!shipData" />
     <div v-else>
       <h3 class="info__header">Ship {{ shipData.name }}</h3>
       <div class="ship__box">
@@ -33,7 +30,7 @@
               :key="`ship_${el}`"
             >{{ index + 1 }}</router-link>
           </p>
-          <p>
+          <p v-if="shipData.link">
             <a
               :href="shipData.link"
               target="_blank"
@@ -53,9 +50,10 @@ import { RouterLink } from 'vue-router'
 import spacex from '@/services/spacex'
 import type { Ship } from '@/types/ships'
 import ShipImage from './ShipImage.vue'
+import Loader from '@/components/common/Loader.vue'
 
 export default defineComponent({
-  components: { RouterLink, ShipImage },
+  components: { RouterLink, ShipImage, Loader },
   props: ['id'],
   setup (props) {
     const shipData = ref<Ship>()

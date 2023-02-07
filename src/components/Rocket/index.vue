@@ -1,9 +1,6 @@
 <template>
   <div class="rocket">
-    <p
-      v-if="!rocketData"
-      class="info__paragraph text__center"
-    >Waiting for data...</p>
+    <loader v-if="!rocketData" />
     <div
       v-else
       class="rocket__main"
@@ -38,9 +35,10 @@ import type { Rocket } from '@/types/rockets'
 import RocketDimensions from './RocketDimensions.vue'
 import RocketTable from './RocketTable.vue'
 import Slider from '@/components/common/Slider.vue'
+import Loader from '@/components/common/Loader.vue'
 
 export default defineComponent({
-  components: { RocketDimensions, RocketTable, Slider },
+  components: { RocketDimensions, RocketTable, Slider, Loader },
   props: ['id'],
   setup (props) {
     let rocketData = ref<Rocket>()

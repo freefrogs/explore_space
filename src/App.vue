@@ -46,7 +46,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import Navigation from '@/components/common/Navigation.vue'
-import AppFooter from '@/components/common/AppFooter.vue';
+import AppFooter from '@/components/common/AppFooter.vue'
 </script>
 
 <style lang="scss">

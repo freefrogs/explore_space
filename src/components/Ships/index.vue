@@ -1,7 +1,6 @@
 <template>
   <div class="ships">
     <h3 class="info__header">Check out ships info</h3>
-    <p class="info__paragraph text__center">{{ searchedShips.length }} results:</p>
     <div class="ships__filters text__center">
       <label>
         Enter phrase:
@@ -23,6 +22,7 @@
         >
       </label>
     </div>
+    <p class="info__paragraph text__center">{{ searchedShips.length }} results:</p>
     <transition-group
       name="list"
       key="ShipsList"

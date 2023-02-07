@@ -1,9 +1,6 @@
 <template>
   <div class="launch">
-    <p
-      v-if="!launchData"
-      class="info__paragraph text__center"
-    >Waiting for data...</p>
+    <loader v-if="!launchData" />
     <div
       v-else
       class="launch__main"
@@ -71,9 +68,10 @@ import { RouterLink } from 'vue-router'
 import LaunchLinks from './LaunchLinks.vue'
 import LaunchPartial from './LaunchPartial.vue'
 import Slider from '@/components/common/Slider.vue'
+import Loader from '@/components/common/Loader.vue'
 
 export default defineComponent({
-  components: { LaunchLinks, LaunchPartial, Slider, RouterLink },
+  components: { LaunchLinks, LaunchPartial, Slider, RouterLink, Loader },
   props: ['id'],
   setup (props) {
     let launchData = ref<Launch>()

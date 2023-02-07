@@ -1,9 +1,6 @@
 <template>
   <div class="capsule text__center">
-    <p
-      v-if="!capsuleData"
-      class="info__paragraph"
-    >Waiting for data...</p>
+    <loader v-if="!capsuleData" />
     <div v-else>
       <h3 class="info__header">Capsule Serial: {{ capsuleData.serial }}</h3>
       <p class="info__paragraph">Last update: {{ capsuleData.last_update }}</p>
@@ -35,9 +32,10 @@ import { defineComponent, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import spacex from '@/services/spacex'
 import type { Capsule } from '@/types/capsules'
+import Loader from '@/components/common/Loader.vue'
 
 export default defineComponent({
-  components: { RouterLink },
+  components: { RouterLink, Loader },
   props: ['id'],
   setup (props) {
     let capsuleData = ref<Capsule>()

@@ -61,12 +61,17 @@ export default defineComponent({
 .rocket {
   &__details {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+    }
   }
   &__paragraph {
-    font-size: 1vw;
-    margin: 2%;
+    font-size: 1.2rem;
+    margin: 2rem auto;
   }
 }
 </style>

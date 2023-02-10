@@ -1,18 +1,18 @@
 <template>
   <div class="pagination">
     <span
-      class="pagination__item"
+      class="pagination__item pagination__item--show"
       @click="changeActiveItem('prev')"
     >&#8249;</span>
     <span
       v-for="el in pageAmount"
       class="pagination__item"
-      :class="{ 'pagination__item--active': el === pageActive }"
+      :class="{ 'pagination__item--active': el === pageActive, 'pagination__item--show': checkIfVisible(el) }"
       :key="`page-${el}`"
       @click="changeActiveItem(el)"
     >{{ el }}</span>
     <span
-      class="pagination__item"
+      class="pagination__item pagination__item--show"
       @click="changeActiveItem('next')"
     >&#8250;</span>
   </div>
@@ -41,6 +41,11 @@ export default defineComponent({
       emit('activePageChange', pageActive.value)
     }
 
+    const checkIfVisible = (el:number) => {
+      if (!pageActive.value) return true
+      return el <= (pageActive.value as number + 2) && el >= (pageActive.value as number) - 2
+    }
+
     const stopWatch = watch(() => props.pageAmount, () => {
       pageActive.value = 1
       emit('activePageChange', 1)
@@ -48,7 +53,8 @@ export default defineComponent({
     onBeforeUnmount(() => {
       stopWatch()
     })
-    return { changeActiveItem, pageActive }
+
+    return { changeActiveItem, pageActive, checkIfVisible }
   }
 })
 </script>
@@ -71,8 +77,15 @@ export default defineComponent({
     background: var(--details-light-2);
     cursor: pointer;
     transition: .3s ease-in-out;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: initial;
+    }
     &--active {
       background: var(--details-light);
+    }
+    &--show {
+      display: initial;
     }
   }
 }

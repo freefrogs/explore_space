@@ -26,29 +26,48 @@ export default defineComponent({
 
 <style lang="scss">
 .rocket__dimensions {
-  width: 20%;
+  width: 80%;
   height: auto;
+  margin-top: 3rem;
+  @media screen and (min-width: 500px) {
+    width: 60%;
+  }
+  @media screen and (min-width: 700px) {
+    width: 40%;
+  }
+  @media screen and (min-width: 900px) {
+    width: 20%;
+  }
   * {
     font-weight: 800;
-    font-size: 1vw;
+    font-size: 1.2rem;
     text-align: center;
+  }
+  span {
+    transform: rotate(270deg);
   }
   .rocket__height {
     position: absolute;
     height: 85%;
     top: 0;
     border-left: 1px solid var(--dark);
-    padding-left: 10px;
-    right: -1vw;
-    vertical-align: middle;
+    right: -1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media screen and (min-width: 900px) {
+      height: 75%;
+      right: -2.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      height: 80%;
+      right: -2rem;
+    }
   }
   .rocket__diameter {
     position: absolute;
     width: 55%;
-    top: -2.3vw;
+    top: -3rem;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--dark);
     left: 50%;

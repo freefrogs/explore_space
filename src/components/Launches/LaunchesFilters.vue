@@ -1,5 +1,5 @@
 <template>
-  <div class="launches-filters">
+  <div class="launches-filters info__filters">
     <label>
       Enter phrase:
       <input
@@ -35,7 +35,7 @@
         >{{ el }}</option>
       </select>
     </label>
-    <div>
+    <div class="text__center">
       <label>
         Launches from:
         <input
@@ -46,6 +46,7 @@
           v-model="yearFrom"
         >
       </label>
+      <br class="main--hidden">
       <label>
         To:
         <input
@@ -101,10 +102,10 @@ export default defineComponent({
 
 <style lang="scss">
 .launches-filters {
-  width: 80%;
+  width: 95%;
   margin: 20px auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  @media screen and (min-width: 900px) {
+    width: 80%;
+  }
 }
 </style>

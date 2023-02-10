@@ -62,8 +62,8 @@ export default defineComponent({
     margin: 0 auto 2%;
   }
   &__paragraph {
-    font-size: 1vw;
-    margin: 2%;
+    font-size: 1.2rem;
+    margin: 2rem auto;
   }
 }
 </style>

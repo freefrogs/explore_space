@@ -34,9 +34,11 @@ export default defineComponent({
 <style lang="scss">
 .crew-card {
   .icon__helmet {
-    margin-left: 20px;
     height: auto;
     width: 50px;
+    @media screen and (min-width: 900px) {
+      margin-left: 20px;
+    }
   }
 }
 </style>

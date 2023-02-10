@@ -68,9 +68,13 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     margin-bottom: 2%;
+    flex-wrap: wrap;
   }
   &__image {
-    width: 30%;
+      width: 80%;
+    @media screen and (min-width: 900px) {
+      width: 30%;
+    }
   }
 }
 </style>

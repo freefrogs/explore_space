@@ -10,14 +10,16 @@
         alt="spaceX launch"
       >
     </div>
-    <p
-      @click="changeSlide('prev')"
-      class="slider__btn slider__btn--prev slider__circle"
-    >&#8249;</p>
-    <p
-      @click="changeSlide('next')"
-      class="slider__btn slider__btn--next slider__circle"
-    >&#8250;</p>
+    <div class="slider__arrows">
+      <p
+        @click="changeSlide('prev')"
+        class="slider__btn slider__circle"
+      >&#8249;</p>
+      <p
+        @click="changeSlide('next')"
+        class="slider__btn slider__circle"
+      >&#8250;</p>
+    </div>
     <div class="slider__pagination">
       <span
         v-for="(dot, index) in imagesArray.length"
@@ -77,34 +79,38 @@ export default defineComponent({
       background: var(--details-light);
     }
   }
-  &__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3vw;
-    width: 4vw;
-    height: 4vw;
-    line-height: 4vw;
-    text-align: center;
-    z-index: 5
-    &--prev {
-      left: 0;
-    }
-    &--next {
-      right: 0;
+  &__arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (min-width: 900px) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
     }
   }
+  &__btn {
+    font-size: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+  }
   &__dot {
-    width: 2vw;
-    height: 2vw;
+    width: 2.3rem;
+    height: 2.3rem;
     &--active {
       background: var(--details-light);
     }
   }
   &__pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    display: none;
+    @media screen and (min-width: 900px) {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
   }
   &__image {
     height: 100%;

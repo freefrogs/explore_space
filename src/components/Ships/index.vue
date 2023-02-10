@@ -11,6 +11,7 @@
           placeholder="search for..."
         >
       </label>
+      <br class="main--hidden">
       <label>
         Year built from:
         <input

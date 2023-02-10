@@ -90,7 +90,13 @@ export default defineComponent({
 .rocket {
   &__table {
     width: 70%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    @media screen and (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 800px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 </style>

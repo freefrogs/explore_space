@@ -48,6 +48,6 @@ export default defineComponent({
 
 <style lang="scss">
 .event {
-  padding-bottom: 3%;
+  padding-bottom: 3rem;
 }
 </style>

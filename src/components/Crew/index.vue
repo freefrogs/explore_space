@@ -101,6 +101,14 @@ export default defineComponent({
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
     align-items: center;
     padding: 10px;
+    *:not(.info__btn) {
+      padding: 5px;
+    }
+    @media screen and (min-width: 900px) {
+      *:not(.info__btn) {
+        padding: 0;
+      }
+    }
   }
 }
 </style>

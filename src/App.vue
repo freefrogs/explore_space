@@ -51,8 +51,14 @@ import AppFooter from '@/components/common/AppFooter.vue'
 
 <style lang="scss">
 .basic {
-  padding: 1%;
-  width: 80%;
+  padding: 2rem 1%;
+  width: 95%;
+  @media screen and (min-width: 1000px) {
+    width: 90%;
+  }
+  @media screen and (min-width: 1400px) {
+    width: 80%;
+  }
   margin: 2% auto;
   border: 6px solid var(--dark);
   box-shadow: var(--shadow);

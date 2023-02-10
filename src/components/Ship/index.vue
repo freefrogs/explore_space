@@ -75,13 +75,21 @@ export default defineComponent({
 <style lang="scss">
 .ship {
   &__image {
-    width: 50%;
+    width: 80%;
+    @media screen and (min-width: 900px) {
+      width: 50%;
+    }
   }
   &__box {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2%;
+    flex-direction: column;
+    padding: 1rem;
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+    }
   }
 }
 </style>

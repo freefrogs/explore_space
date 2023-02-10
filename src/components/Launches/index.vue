@@ -122,6 +122,7 @@ export default defineComponent({
     grid-template-columns: 1fr 3fr 2fr 1fr;
     align-items: center;
     padding: 20px 0;
+    text-align: center;
   }
 }
 </style>

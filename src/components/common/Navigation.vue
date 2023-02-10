@@ -65,12 +65,20 @@ export default defineComponent({
 .navigation {
   z-index: 10;
   display: flex;
+  align-items: baseline;
   padding-left: 10px;
+  top: -1.5rem;
   .navigation__link {
     margin: 10px;
     text-transform: uppercase;
-    font-size: 1.5vw;
+    font-size: 1rem;
     border-bottom: 3px solid transparent;
+    @media screen and (min-width: 900px) {
+      font-size: 1.4rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.8rem;
+    }
   }
   .navigation__link--explore {
     font-weight: 800;
@@ -91,7 +99,7 @@ export default defineComponent({
   .navigation-explore__box {
     width: 20%;
     min-width: 320px;
-    height: calc(1.5vw + 20px);
+    height: 4rem;
     &:hover .navigation-explore__links {
       opacity: 0.92;
       transform: translateY(0);

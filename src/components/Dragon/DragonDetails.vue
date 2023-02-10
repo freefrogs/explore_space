@@ -44,14 +44,20 @@ export default defineComponent({
   &__details {
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 1.5rem;
+    flex-direction: column;
+    margin: 2rem auto;
+    @media screen and (min-width: 900px) {
+      gap: 10%;
+      flex-direction: row;
+    }
     &__paragraph {
       text-decoration: underline;
       text-decoration-color: var(--details-light);
     }
   }
   &__items {
-    font-size: 1vw;
+    font-size: 1.2rem;
     text-align: left;
   }
 }

@@ -15,6 +15,7 @@
           >{{ el }}</option>
         </select>
       </label>
+      <br class="main--hidden">
       <label>
         Status:
         <select

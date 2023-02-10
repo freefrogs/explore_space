@@ -1,7 +1,7 @@
 <template>
   <div class="history">
     <h3 class="info__header">Dive in SpaceX history</h3>
-    <div class="history__filters text__center">
+    <div class="info__filters text__center">
       <label>
         Enter phrase:
         <input
@@ -86,10 +86,7 @@ export default defineComponent({
   &__events {
     width: 80%;
     margin: 1% auto;
-    font-size: 1vw;
-  }
-  &__filters {
-    font-size: 1.1vw;
+    font-size: 1.2rem;
   }
 }
 </style>

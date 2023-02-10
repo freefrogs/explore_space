@@ -67,14 +67,20 @@ export default defineComponent({
     width: 70%;
     margin: 0 auto 2%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 2px;
     background: var(--details-light);
+    @media screen and (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   &__cell {
     background: var(--light);
-    padding: 20px;
-    font-size: 1.1vw;
+    padding: 1.3rem;
+    font-size: 1.35rem;
   }
   &__header {
     font-weight: 800;

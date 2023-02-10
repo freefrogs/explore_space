@@ -51,6 +51,17 @@ export default defineComponent({
 .rockets {
   &__grid {
     grid-template-columns: repeat(6, 1fr);
+    * {
+      transform: rotate(270deg);
+      text-align: center;
+      margin: 10px;
+      min-height: 45px;
+      @media screen and (min-width: 900px) {
+        transform: rotate(0);
+        margin: 0;
+        min-height: unset;
+      }
+    }
   }
 }
 </style>

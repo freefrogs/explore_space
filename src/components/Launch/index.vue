@@ -5,12 +5,12 @@
       v-else
       class="launch__main"
     >
+      <h3 class="info__header">Launch {{ launchData.name }}</h3>
       <img
         :src="launchData.links.patch.small"
         :alt="`${launchData.name} patch`"
         class="launch__patch"
       />
-      <h3 class="info__header">Launch {{ launchData.name }}</h3>
       <div
         class="launch__box launch__box--gap"
         v-if="isPartials"
@@ -111,14 +111,19 @@ export default defineComponent({
 
 <style lang="scss">
 .launch {
+  text-align: center;
+  @media screen and (min-width: 900px) {
+    text-align: initial;
+  }
   &__main {
     width: 90%;
     margin: 0 auto 2%;
-    font-size: 1.2vw;
+    font-size: 1.45rem;
   }
   &__box {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     &--title {
       font-weight: 800;
     }
@@ -127,11 +132,16 @@ export default defineComponent({
     }
   }
   &__patch {
-    position: absolute;
-    top: 0;
-    right: 0;
     max-height: 150px;
     width: auto;
+    opacity: 1;
+    align-self: center;
+    @media screen and (min-width: 900px) {
+      opacity: 0.7;
+      position: absolute;
+      top: -2%;
+      right: -5%;
+    }
   }
 }
 </style>

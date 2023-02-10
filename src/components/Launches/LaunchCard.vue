@@ -44,8 +44,10 @@ export default defineComponent({
 <style lang="scss">
 .launch-card {
   &__icon {
-    font-size: 1.6vw;
-    padding-left: 1.6vw;
+    font-size: 1.2rem;
+    @media screen and (min-width: 900px) {
+      font-size: 1.9rem;
+    }
   }
 }
 </style>

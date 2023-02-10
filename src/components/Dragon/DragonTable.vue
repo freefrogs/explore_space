@@ -52,6 +52,12 @@ export default defineComponent({
 
 <style lang="scss">
 .dragon__table {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>

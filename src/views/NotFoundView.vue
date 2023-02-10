@@ -1,6 +1,10 @@
 <template>
   <div class="text__center not-found-view">
-    <h2 class="main__title">404 Page not found</h2>
+    <h2 class="main__title">
+      404
+      <br class="main--hidden">
+      Page not found
+    </h2>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 793.74999 793.74998"
@@ -17,7 +21,10 @@
 
 <style lang="scss">
 .not-found-view {
-  padding-top: 5%;
+  padding-top: 10%;
+  @media screen and (min-width: 1200px) {
+    padding-top: 5%;
+  }
   .svg__astronaut {
     width: 50%;
     @media screen and (orientation: portrait) {

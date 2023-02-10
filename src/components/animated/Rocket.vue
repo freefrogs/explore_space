@@ -13,15 +13,27 @@
 </template>
 
 <style lang="scss">
+@keyframes rocket_animation {
+  0% { transform: translate(0) scaleX(-1); opacity: 0.5; }
+  20% { transform: translate(-2px, 2px) scaleX(-1); opacity: 1; }
+  40% { transform: translate(-2px, -2px) scaleX(-1); opacity: 0.5; }
+  60% { transform: translate(2px, 2px) scaleX(-1); opacity: 1; }
+  80% { transform: translate(2px, -2px) scaleX(-1); opacity: 0.5; }
+  100% { transform: translate(0) scaleX(-1); opacity: 0.5; }
+}
 .svg__rocket {
   fill: #000;
   stroke:#fff;
   stroke-width: 1;
   position: absolute;
-  width: 20%;
+  width: 32%;
   height: auto;
-  bottom: 0;
+  bottom: 2%;
   right: 5%;
-  transform: scaleX(-1);
+  animation: rocket_animation 0.4s linear infinite both;
+  @media screen and (min-width: 700px) {
+    width: 20%;
+    bottom: 0;
+  }
 }
 </style>

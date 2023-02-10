@@ -547,15 +547,25 @@
 </template>
 
 <style lang="scss">
+@keyframes planet-animation {
+  0% { transform: translateX(-800px) rotate(-540deg) scale(1); opacity: 0; }
+  33% { transform: translateX(0) rotate(10deg) scale(1.2); opacity: 1; }
+  66% { transform: translateX(0) rotate(10deg) scale(1.2); opacity: 1; }
+  100% { transform: translateX(800px) rotate(540deg) scale(1); opacity: 0; }
+}
 .svg__planet {
   fill: #000;
   stroke:#fff;
   stroke-width: 3;
   position: absolute;
-  width: 20%;
+  width: 40%;
   height: auto;
-  top: 5%;
+  top: 15%;
   right: 30%;
-  transform: rotate(10deg);
+  animation: planet-animation 4s ease-in-out infinite both;
+  @media screen and (min-width: 600px) {
+    width: 20%;
+    top: 6%;
+  }
 }
 </style>

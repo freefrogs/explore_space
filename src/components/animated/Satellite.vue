@@ -752,15 +752,33 @@
 </template>
 
 <style lang="scss">
+@keyframes satellite-animation {
+  0% {
+    transform: translateX(-800px) rotate(30deg) scale(0);
+    transform-origin: -100% 50%;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0) rotate(0) scale(1);
+    transform-origin: 1800px 50%;
+    opacity: 1;
+  }
+}
+
 .svg__satellite {
   fill: #000;
   stroke:#fff;
   stroke-width: 2;
   position: absolute;
-  width: 20%;
+  width: 40%;
   height: auto;
-  bottom: 10%;
-  left: 5%;
-  transform: rotate(-20deg);
+  bottom: 2%;
+  left: 2%;
+  animation: satellite-animation 4s ease-in-out infinite alternate-reverse both;
+  @media screen and (min-width: 900px) {
+    width: 25%;
+    bottom: 10%;
+    left: 5%;
+  }
 }
 </style>

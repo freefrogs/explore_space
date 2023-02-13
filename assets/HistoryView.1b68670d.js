@@ -1,0 +1,1 @@
+import{I as t}from"./IntroductionBox.852b4f6d.js";import{d as n,_ as e,r as c,o as r,c as s}from"./index.e05dc400.js";const i=n({components:{IntroductionBox:t}});function a(p,_,d,m,f,u){const o=c("introduction-box");return r(),s(o,{title:"SpaceX historical events"})}const $=e(i,[["render",a]]);export{$ as default};

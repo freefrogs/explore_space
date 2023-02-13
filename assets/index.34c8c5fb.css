@@ -1,0 +1,1 @@
+.crew-card .icon__helmet{height:auto;width:50px}@media screen and (min-width: 900px){.crew-card .icon__helmet{margin-left:20px}}.crew__grid{display:grid;grid-template-columns:1fr 2fr 1fr 1fr 1fr;align-items:center;padding:10px}.crew__grid *:not(.info__btn){padding:5px}@media screen and (min-width: 900px){.crew__grid *:not(.info__btn){padding:0}}

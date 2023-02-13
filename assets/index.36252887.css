@@ -1,0 +1,1 @@
+.svg__ship{fill:#000;stroke:none}.ship__image{width:80%}@media screen and (min-width: 900px){.ship__image{width:50%}}.ship__box{display:flex;justify-content:center;align-items:center;margin-bottom:2%;flex-direction:column;padding:1rem}@media screen and (min-width: 900px){.ship__box{flex-direction:row}}

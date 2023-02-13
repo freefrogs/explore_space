@@ -1,0 +1,1 @@
+import{d as s,_ as o,o as n,e as a,a as t,t as r,f as i}from"./index.e05dc400.js";const _=s({props:{title:{required:!0,type:String}}}),c={class:"main__absolute"},d={class:"text__center main__centered"},l={class:"main__title"};function p(e,f,m,u,h,$){return n(),a("div",c,[t("div",d,[t("h2",l,r(e.title),1),i(e.$slots,"default")])])}const x=o(_,[["render",p]]);export{x as I};

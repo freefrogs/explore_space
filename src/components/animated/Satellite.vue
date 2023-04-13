@@ -774,7 +774,7 @@
   height: auto;
   bottom: 2%;
   left: 2%;
-  animation: satellite-animation 4s ease-in-out infinite alternate-reverse both;
+  animation: satellite-animation 6s ease-in-out infinite alternate-reverse both;
   @media screen and (min-width: 900px) {
     width: 25%;
     bottom: 10%;

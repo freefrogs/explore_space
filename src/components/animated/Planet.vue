@@ -548,10 +548,10 @@
 
 <style lang="scss">
 @keyframes planet-animation {
-  0% { transform: translateX(-800px) rotate(-540deg) scale(1); opacity: 0; }
-  33% { transform: translateX(0) rotate(10deg) scale(1.2); opacity: 1; }
-  66% { transform: translateX(0) rotate(10deg) scale(1.2); opacity: 1; }
-  100% { transform: translateX(800px) rotate(540deg) scale(1); opacity: 0; }
+  0% { transform: translate(-800px, -100px) rotate(0deg) scale(1); opacity: 0; }
+  40% { transform: translate(0) rotate(20deg) scale(1.2); opacity: 1; }
+  60% { transform: translate(0) rotate(20deg) scale(1.2); opacity: 1; }
+  100% { transform: translate(800px, -100px) rotate(50deg) scale(1); opacity: 0; }
 }
 .svg__planet {
   fill: #000;
